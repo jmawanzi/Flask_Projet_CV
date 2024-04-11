@@ -2,6 +2,10 @@ from flask import Flask,render_template
 
 app = Flask(__name__) #creating flask app name
 
+@app.route('/')
+def hello_world():
+    return "<h2>Ma page de contact</h2>"
+
 @app.route('/index/')
 def home():
     return render_template("index.html")
